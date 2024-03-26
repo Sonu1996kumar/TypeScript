@@ -327,23 +327,34 @@ enum Val{
 // b1.test();
 
 //-------------OVERRIDING-----------------
+// class A{
+//     test():void{
+//         console.log("from test through inheritance");
+//     }
+// }
+
+// class B extends A{
+//      test(): void {
+//          console.log("from B")
+//      }
+// }
+
+// var b1 = new B();
+// b1.test();
+
+// var a1 = new A();
+// a1.test();
+
+
+//Arrow fnx
 class A{
     test():void{
-        console.log("from test through inheritance");
+        var x=()=>{
+            console.log(100);
+        }
+        x();
     }
 }
-
-class B extends A{
-     test(): void {
-         console.log("from B")
-     }
-}
-
-var b1 = new B();
-b1.test();
-
 var a1 = new A();
 a1.test();
-
-
 
