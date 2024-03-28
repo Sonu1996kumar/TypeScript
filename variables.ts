@@ -356,5 +356,36 @@ class A{
     }
 }
 var a1 = new A();
-a1.test();
+//a1.test();
+
+//--------------**********ACCESS SPECIFIER***************-----------
+//only 2 public and private default is public
+
+class B{
+    public name:string="mike";
+    test():void{
+        console.log("from test")
+    }
+}
+
+var b1 = new B();
+// b1.test();
+// console.log(b1);
+
+class C{
+    private name:string="mike";
+    city:string="chennai";
+    test():void{
+        console.log("from test")
+        console.log(this.name);
+    }
+}
+
+var c1 = new C();
+c1.test();
+//console.log(c1.city);
+//console.log(c1.name); =>error
+
+//----****EXPORT*****------
+export var s=10;
 

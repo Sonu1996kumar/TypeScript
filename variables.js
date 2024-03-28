@@ -1,5 +1,8 @@
+"use strict";
 // var x1:number=10;
 // console.log(x1);
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.s = void 0;
 // var x2:number=10.6;
 // console.log(x2);
 // var x3:string="mike";
@@ -278,4 +281,35 @@ var A = /** @class */ (function () {
     return A;
 }());
 var a1 = new A();
-a1.test();
+//a1.test();
+//--------------**********ACCESS SPECIFIER***************-----------
+//only 2 public and private default is public
+var B = /** @class */ (function () {
+    function B() {
+        this.name = "mike";
+    }
+    B.prototype.test = function () {
+        console.log("from test");
+    };
+    return B;
+}());
+var b1 = new B();
+// b1.test();
+// console.log(b1);
+var C = /** @class */ (function () {
+    function C() {
+        this.name = "mike";
+        this.city = "chennai";
+    }
+    C.prototype.test = function () {
+        console.log("from test");
+        console.log(this.name);
+    };
+    return C;
+}());
+var c1 = new C();
+c1.test();
+//console.log(c1.city);
+//console.log(c1.name); =>error
+//----****EXPORT*****------
+exports.s = 10;
